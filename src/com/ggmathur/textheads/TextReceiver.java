@@ -35,7 +35,7 @@ public class TextReceiver extends BroadcastReceiver {
                
             for ( int i = 0; i < smsExtra.length; ++i )
             {
-                SmsMessage sms = SmsMessage.createFromPdu( (byte[]) smsExtra[i] );
+                final SmsMessage sms = SmsMessage.createFromPdu( (byte[]) smsExtra[i] );
                  
                 final String body = sms.getMessageBody().toString();
                 final String address = sms.getOriginatingAddress();
